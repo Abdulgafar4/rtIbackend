@@ -3,40 +3,38 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema
 
 export const ProductSchema = new Schema ({
-     ProductName: {
+     productName: {
         type: String,
         required: 'Enter product name'
      },
-     ProductCode: {
+     productCode: {
         type: String,
         required: 'Enter product code'
      },
-     ProductImage: {
+     productImage: {
         type: String,
      },
-     Quantity: {
+     quantity: {
         type: Number,
-        required: 'Enter product quantity'
      },
-     Price: {
+     price: {
         type: String,
-        required: 'Enter product price'
      },
-     CostPrice: {
+     costPrice: {
         type: String,
-        required: 'Enter product costprice'
      },
-     UnitOfMeasure: {
+     unit: {
         type: String,
-        required: 'Enter product unit'
      },
-     Describtion: {
+     describtion: {
         type: String,
-        required: 'Enter product describtion'
      },
-     Tag: {
+     tag: {
         type: String,
-        required: 'Enter product tag'
+     },
+     created_Date: {
+        type: Date,
+        default: Date.now
      },
 
 })
